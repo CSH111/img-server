@@ -14,6 +14,10 @@ app.get("/images/tech/:imageName", (req, res) => {
   res.sendFile(path.join(cwd, "images", "tech", imgName));
 });
 
+app.get("/myping", (req, res) => {
+  res.send("pong");
+});
+
 app.listen(port);
 // index.js
 var router = express.Router();
